@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Conference ticket generator</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,43 +13,40 @@
   </style>
 </head>
 <body>
-
-  <!-- Form starts -->
-
-  Your Journey to Coding Conf 2025 Starts Here!
-
-  Secure your spot at next year's biggest coding conference.
-
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
-
-  Full Name
-
-  Email Address
-  example@email.com
-
-  GitHub Username
-  @yourusername
-
-  Generate My Ticket
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  Congrats, <!-- Full Name -->! Your ticket is ready.
-
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-
-  <!-- Generated tickets ends -->
+  <div class="main-container">
+    <div class="description-title">
+    <img class="logo-title" src="/assets/images/logo-full.svg" alt="">
+    <h1>Your Journey to Coding</h1>
+    <h1>Conf 2025 Starts Here!</h1>
+    <h3>Secure your spot at next year's biggest coding conference.</h3>
+    </div>
+     </div>
+  <form class="main-form" action="#">
+      <label for="uploadImage" id="uploadImageLabel">
+      <h4>Upload Avatar</h4>
+      <input type="file" id="uploadImage" hidden><br>
+      <div class="img-container">
+        <img class="logoImg" src="/assets/images/icon-upload.svg" alt="">
+        <p>Drag and drop or click to upload</p>
+      </div>
+      </label>
+      <h5>ⓘ Upload your photo (JPG or PNG, max size: 500KB).</h5>
+      <label for="firstName"><h4>First Name</h4>
+        <input type="text" id="firstName"> 
+      </label>
+      <label for="email"><h4>Email Address</h4>
+        <input type="email" id="email" placeholder="example@email.com"><br>
+      </label> 
+      <label for="githubUser"><h4>Github Username</h4>
+        <input type="text" id="githubUser" placeholder="@yourusername"> <br>
+      </label> 
+      <button class="submitBtn" type="submit">Generate My Ticket</button>
+    </form>
   
+  <script src="script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Rowell Legaspi</a>.
   </div>
 </body>
 </html>

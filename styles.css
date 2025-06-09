@@ -1,0 +1,241 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root{
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+}
+
+@font-face {
+  font-family: bodyFont;
+  src: url(/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+/* ::-webkit-file-upload-button {
+   display: none;
+}
+
+input[type='file'] { font-size: 0; } */
+
+body{
+  font-family: bodyFont;
+  color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  body {
+    background: url(/assets/images/background-mobile.png)  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .description-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: 90%;
+    padding: 12px;
+  }
+
+  .logo-title{
+    margin-bottom: 37px;
+    height: 23px;
+  }
+
+  h1{
+    font-size: 1.7em;
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  h3{
+    text-align: center;
+    color: hsl(245, 31%, 86%);
+    font-weight: 400;
+    text-wrap: pretty;
+  }
+
+  h5{
+    font-weight: 100;
+  }
+
+  form{
+    padding: 12px;
+    padding-bottom: 120px;
+  }
+
+  label{
+    font-size: 1.2em;
+  }
+
+  label h4{
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  input[type='text'], input[type='email'] {
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    color:white;
+    background-color: var(--neutral-900);
+    border: 1px solid var(--neutral-700);
+    border-radius: 10px;
+  }
+
+  .img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background-color: var(--neutral-900);
+    border: 3px dashed var(--neutral-700);
+    border-radius: 15px;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .logoImg{
+    height: 50px;
+    width: 50px;
+    background-color: hsla(245, 19%, 35%, 0.41);
+    border-radius: 10px;
+    padding: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.326);
+  }
+
+  .submitBtn{
+    width: 100%;
+    height: 56px;
+    margin-top: 23px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0;
+    background-color: var(--orange-500);
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
