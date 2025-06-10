@@ -117,13 +117,17 @@ body{
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
 
   body {
     background: url(/assets/images/background-mobile.png)  ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .main-container{
@@ -189,9 +193,8 @@ body{
     border: 1px solid var(--neutral-700);
     border-radius: 10px;
   }
-
-  .img-container{
-    display: flex;
+  .label-container{
+      display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -203,14 +206,60 @@ body{
     font-weight: 200;
     margin: 0;
   }
+  .img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .logoImg{
-    height: 50px;
     width: 50px;
+    height: 50px;
+    padding: 7px;  
     background-color: hsla(245, 19%, 35%, 0.41);
     border-radius: 10px;
-    padding: 7px;
     border: 1px solid rgba(255, 255, 255, 0.326);
+  }
+
+  .logoImg-new{
+    width: 70px;
+    height: 70px;
+    padding: 0;  
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: hsla(245, 19%, 35%, 0.41);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.326);
+  }
+
+  .btnContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btnContainer button{
+  
+    height: 2em;
+    padding: 5px;
+    background-color: hsla(245, 19%, 35%, 0.41);
+    color: white;
+    font-weight: 400;
+    font-size: 0.7em;
+    border: 0;
+    box-shadow: 0;
+  }
+
+  .btnContainer button:hover{
+    background-color: hsla(245, 19%, 35%, 0.908);
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   .submitBtn{
