@@ -274,7 +274,12 @@ body{
     font-weight: 900;
   }
   
-
+  .error-h5{
+    margin-top: 5px;
+    font-size: 0.70em;
+    font-weight: 300;
+    color:rgb(209, 50, 50);
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
